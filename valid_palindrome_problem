@@ -1,0 +1,14 @@
+def is_palindrome_simple(s: str) -> bool:
+    cleaned = ""
+
+    # Step 1: Keep only alphanumeric characters
+    for ch in s:
+        if ch.isalnum():
+            cleaned += ch.lower()
+
+    # Step 2: Compare string with its reverse
+    return cleaned == cleaned[::-1]
+
+
+# Example
+          print(is_palindrome_simple("racecar"))
